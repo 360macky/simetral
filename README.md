@@ -13,6 +13,9 @@
   Artemis I mission GraphQL Sever with NASA Horizons data
 </p>
 
+
+![Demo of Simetral](./.github/demo.png)
+
 ## 📦 Purpose
 
 This project is a GraphQL server that allows you to query real-time and historical data from certain data obtained from NASA Horizons for the Artemis I mission.
