@@ -27,6 +27,53 @@ The server takes the information from a CSV from September 27 to November 5 with
 
 The information was collected with NASA Horizons.
 
+## 🛰 How to use?
+
+### Download Simetral GraphQL server
+Once you cloned this repository in your local environment, install the dependencies.
+
+```sh
+cd simetral
+npm install
+```
+
+### Create a client.
+Great! Now you have a GraphQL server, we need a client. You can use your own client.
+
+But I suggest you to download a very simple example like the `openmct-tutorial` client itself.
+
+```
+git clone https://github.com/nasa/openmct-tutorial.git
+cd openmct-tutorial
+npm install
+```
+
+### Connect with Graphem
+Now inside the `index.html` of the client.
+
+Install Graphem.
+```sh
+npm i graphem
+```
+
+Import Graphem using the following `<script>` tag inside the `<head>`.
+```html
+<script src="node_modules/graphql-ws/umd/graphql-ws.js"></script>
+```
+
+And finally install de plugin using `install()` method.
+```js
+openmct.install(Graphem({
+  namespace: "example.taxonomy",
+  key: "spacecraft",
+  dictionaryPath: "/dictionary.json",
+  telemetryName: "example.telemetry",
+  subscriptionName: "formatted",
+  urn: "localhost:4000/graphql"
+}));
+```
+
+
 ## 🚀 Horizons Data
 
 Below is a brief explanation using the data collected from the **Horizons System**:
