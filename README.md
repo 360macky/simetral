@@ -61,7 +61,22 @@ Import Graphem using the following `<script>` tag inside the `<head>`.
 <script src="node_modules/graphql-ws/umd/graphql-ws.js"></script>
 ```
 
-And finally install de plugin using `install()` method.
+Copy the content from `schema_dictionary.json` to `dictionary.json` file in the client directory.
+
+```json
+{
+  "name": "Artemis I",
+  "key": "sc",
+  "measurements": [
+    {
+      "name": "Angular rate of change",
+      "key": "angular_rate_of_change",
+      "values": [
+        {
+  ...
+```
+
+Install de plugin using `install()` method.
 ```js
 openmct.install(Graphem({
   namespace: "rocket.taxonomy", // Custom namespace
@@ -71,6 +86,17 @@ openmct.install(Graphem({
   subscriptionName: "formatted", // Name of the <GraphQL> subscription for historical telemetry
   urn: "localhost:4000/graphql" // Source URN (Uniform Resource Name)
 }));
+```
+
+🚀 And start both projects:
+```
+cd openmct-tutorial
+npm start
+
+cd ..
+
+cd simetral
+npm run dev
 ```
 
 
