@@ -64,12 +64,12 @@ Import Graphem using the following `<script>` tag inside the `<head>`.
 And finally install de plugin using `install()` method.
 ```js
 openmct.install(Graphem({
-  namespace: "example.taxonomy",
-  key: "spacecraft",
-  dictionaryPath: "/dictionary.json",
-  telemetryName: "example.telemetry",
-  subscriptionName: "formatted",
-  urn: "localhost:4000/graphql"
+  namespace: "rocket.taxonomy", // Custom namespace
+  key: "orion", // Custom Key
+  dictionaryPath: "/dictionary.json", // Path of dictionary
+  telemetryName: "rocket.telemetry", // Name of telemetry
+  subscriptionName: "formatted", // Name of the <GraphQL> subscription for historical telemetry
+  urn: "localhost:4000/graphql" // Source URN (Uniform Resource Name)
 }));
 ```
 
