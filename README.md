@@ -10,11 +10,14 @@
 </p>
 
 <p align="center">
-  Artemis I mission GraphQL Sever with NASA Horizons data
+  ✨ Artemis I mission GraphQL Sever with NASA Horizons data 🛰 - Basic example of Graphem
 </p>
 
-
 ![Demo of Simetral](./.github/demo.png)
+
+
+> ⚠️ The data will be updated because Artemis 1 mission will reschedule for later.
+
 
 ## 📦 Purpose
 
